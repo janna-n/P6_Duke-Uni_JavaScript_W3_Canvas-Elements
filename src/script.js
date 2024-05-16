@@ -587,3 +587,77 @@ function addOrangeTriangles(coordinatesArray) {
     conO.font= "bold 28px sans-serif";
     conO.fillText("=", 200, 65);
 }
+
+function docolor() {
+  
+  var cc4 = document.getElementById("c4");
+  var colorinput = document.getElementById("clr");
+  var color = colorinput.value;
+  
+  cc4.style.backgroundColor = color;
+  
+}
+
+function dosquare() {
+  
+  var cc4 = document.getElementById("c4");
+  var sizeinput = document.getElementById("sldr");
+  var size = sizeinput.value
+  var sqr = cc4.getContext("2d");
+  
+  sqr.clearRect(0,0,cc4.width,cc4.height);
+  
+  var startX = (cc4.width - size) / 2;
+  var startY = (cc4.height - size) / 2;
+  
+  sqr.fillStyle = "#509BDF";
+  sqr.strokeStyle = "#333333";
+  sqr.fillRect(startX,startY,size,size);
+  sqr.strokeRect(startX,startY,size, size);
+  
+}
+
+function docircle() {
+    var cc4 = document.getElementById("c4");
+    var sizeinput = document.getElementById("circleSldr");
+    var size = sizeinput.value;
+    var crl = cc4.getContext("2d");
+
+    crl.clearRect(0, 0, cc4.width, cc4.height);
+
+    var centerX = cc4.width / 2;
+    var centerY = cc4.height / 2;
+    var radius = size;
+
+    crl.strokeStyle = "#333333";
+    crl.fillStyle = "#509BDF"; 
+    crl.beginPath();
+    crl.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    crl.closePath();
+    crl.fill();
+    crl.stroke();
+}
+
+function dotriangle() {
+    var cc4 = document.getElementById("c4");
+    var sizeinput = document.getElementById("triangleSldr");
+    var size = sizeinput.value;
+    var tria = cc4.getContext("2d");
+
+    tria.clearRect(0, 0, cc4.width, cc4.height);
+
+    var centerX = cc4.width / 2;
+    var centerY = cc4.height / 2;
+    var height = Math.sqrt(3) * size / 2; // Height of equilateral triangle
+    var halfBase = size / 2; // Half of the base length
+    
+    tria.strokeStyle = "#333333";
+    tria.fillStyle = "#509BDF";
+    tria.beginPath();
+    tria.moveTo(centerX - halfBase, centerY + height / 2); // Bottom left corner
+    tria.lineTo(centerX + halfBase, centerY + height / 2); // Bottom right corner
+    tria.lineTo(centerX, centerY - height / 2); // Top corner
+    tria.closePath();
+    tria.fill();
+    tria.stroke();
+}

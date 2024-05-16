@@ -9,9 +9,46 @@
 <body>
 <!-- partial:index.partial.html -->
 <h2>Teach your kids about shapes and colors!</h2>
+<hr>
 
+<div id="make shapes">
+
+    <h3>&#9679;&#9632;&#9650; Let's make colors & shapes! &#9650;&#9632;&#9679;</h3>
+
+<canvas id="c4"></canvas>
+<br>
+<br>
+  
+  Let's learn about <b>colors</b>! 
+  
+  <input type="color" value="#b13939" id="clr" oninput="docolor()">
+  
+<br>
+<br>
+  
+  Then pick a shape to make!
+  <br>
+  <br>
+  Can you guess what each shape is <em>before</em> you make them?
+  <br>
+  <br>
+  What is a <b><em>square</em></b>?
+  <input type="range" min="0" max="120" value="10" id="sldr" oninput="dosquare()" >
+  <br>
+  <br>
+  What is a <b><em>circle</em></b>?
+  <input type="range" min="0" max="60" value="10" id="circleSldr" oninput="docircle()">
+  <br>
+  <br>
+  What is a <b><em>triangle</em></b>?
+  <input type="range" min="0" max="130" value="10" id="triangleSldr" oninput="dotriangle()">
+
+<br>
+<br>
+<hr>     
+</div> 
 <div id="squares">
-  <hr>
+
     <h3>&#9632; Let's make squares &#9632;</h3>
 
 <canvas id="c1">
@@ -45,11 +82,7 @@
 
   <h3>&#9679; Let's make circles &#9679;</h3>
 
-<canvas id="c2">
-
-  
-  
-</canvas>  
+<canvas id="c2"></canvas>  
 <br>
 <br>
   
