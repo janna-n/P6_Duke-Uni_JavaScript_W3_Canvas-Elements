@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h5, h6 {
+  color: #509BDF;
+}
+
+.buttonStyle {
+  background: #509BDF;
+  width: 13em;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+#c1 {
+  border: 1px solid #333333;
+  width: 300px;
+  height: 150px;
+}
+
+#c2 {
+  border: 1px solid #333333;
+  width: 300px;
+  height: 150px;
+}
+
+#c3 {
+  border: 1px solid #333333;
+  width: 300px;
+  height: 150px;
+}
